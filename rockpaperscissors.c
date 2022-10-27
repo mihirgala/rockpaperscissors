@@ -107,7 +107,7 @@ int endLoop(int *uscore,int *cscore){
         return 0;
     }
 
-    if( c =='n' || c == 'N'){
+    else if( c =='n' || c == 'N'){
         return 0;
     }
     else if( c =='y' || c =='Y'){
