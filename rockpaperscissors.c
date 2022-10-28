@@ -37,10 +37,10 @@ void main(){
     system("cls");
     printf("Thanks for playing\n\n");
     if(uscore==10){
-        printf("You won the game!");
+        printf("You won the game!\n");
     }
     else if(cscore==10){
-        printf("You lost the game...");
+        printf("You lost the game...\n");
     }
     putScore(&uscore,&cscore);
     getch();
