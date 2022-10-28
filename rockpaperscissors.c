@@ -36,7 +36,14 @@ void main(){
     }while(loop!=0);
     system("cls");
     printf("Thanks for playing\n\n");
+    if(uscore==10){
+        printf("You won the game!");
+    }
+    else if(cscore==10){
+        printf("You lost the game...");
+    }
     putScore(&uscore,&cscore);
+    getch();
 }
 
 void rps(int choice,int *uscore,int *cscore){
