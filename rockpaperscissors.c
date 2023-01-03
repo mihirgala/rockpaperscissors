@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<conio.h>
 #include<time.h>
+#include<windows.h>
 
 void rps(int ,int *,int *);
 void putDash(int);
@@ -12,6 +13,7 @@ void main(){
     char choice;
     int data,loop,uscore=0,cscore=0;
     do{
+        SetConsoleTitle("Rock Paper Sissors v0.4");
         system("cls");
         putDash(100);
         printf("First to 10 wins\n\n");
