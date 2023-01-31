@@ -32,11 +32,11 @@
             }
             else if(compChoice==2){
                 if(userChoice==1){
-                    document.getElementById("game").innerHTML="You lost, Computer also picked paper :c";
+                    document.getElementById("game").innerHTML="You lost, Computer picked paper :c";
                     compScore++;
                 }
                 else if(userChoice==2){
-                    document.getElementById("game").innerHTML="Draw, Computer picked paper.";
+                    document.getElementById("game").innerHTML="Draw, Computer also picked paper.";
                 }
                 else if(userChoice==3){
                     document.getElementById("game").innerHTML="You Won, Computer picked rock paper!";
@@ -45,7 +45,7 @@
             }
             else if(compChoice==3){
                 if(userChoice==1){
-                    document.getElementById("game").innerHTML="You won, Computer also picked scissors!";
+                    document.getElementById("game").innerHTML="You won, Computer picked scissors!";
                     userScore++;
                 }
                 else if(userChoice==2){
@@ -53,7 +53,7 @@
                     compScore++;
                 }
                 else if(userChoice==3){
-                    document.getElementById("game").innerHTML="Draw, Computer picked rock scissors.";
+                    document.getElementById("game").innerHTML="Draw, Computer picked also rock scissors.";
                 }
             }
             round++;
@@ -94,6 +94,6 @@
     <div id="buttoncontainer">
         <button type="reset" onclick="reset()"><h1>RESET</h1></button>
     </div>
-    <footer>rock paper scissors v0.3 by <a href="https://github.com/mihirgala" title="Mihir's github">@mihirgala</a></footer>
+    <footer>rock paper scissors v0.4 by <a href="https://github.com/mihirgala" title="Mihir's github">@mihirgala</a></footer>
 </body>
 </html>
