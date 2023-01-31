@@ -51,20 +51,22 @@ class rockpaperscissors{
         int compgen=((rand() % 3)+1);
         if(compgen==1){
         if(choice==1){
-            cout<<"Its a draw! The computer picked rock aswell..";
+            cout<<"Its a draw! The computer picked rock aswell.."
+            printf("Its a draw! The computer picked rock aswell..");
         }
         else if(choice==2){
-            cout<<"You won! The computer picked rock.";
+            printf("You won! The computer picked rock.");
             *uscore=*uscore+1;
         }
         else if(choice==3){
-            cout<<"You won! The computer picked rock.";
+            printf("You lost! The computer picked rock :c");
             *cscore=*cscore+1;
         }
         }
         if(compgen==2){
         if(choice==1){
-            cout<<"You lost! The computer picked paper :c";
+            
+            printf("You lost! The computer picked paper :c");
             *cscore=*cscore+1;
         }
         else if(choice==2){

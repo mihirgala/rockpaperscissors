@@ -9,6 +9,10 @@ body{
 button{
     background-color:transparent;
 }
+button:hover{
+    background-color: white;
+    color:black;
+}
 #score{
     font-weight: bold;
 }

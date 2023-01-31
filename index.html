@@ -15,7 +15,7 @@
         <!--Rock = 1 Paper =2 Scissors =3-->
         function rockPaperScissors(userChoice){
             let compChoice = Math.floor((Math.random() * 3) + 1);
-            document.getElementById("score").innerText="Your Score : "+userScore+" Computer Score : "+compScore+"";
+            document.getElementById("score").innerText="Your Score : "+userScore+" // Computer Score : "+compScore+"";
             if(compChoice==1){
                 if(userChoice==1){
                     document.getElementById("game").innerHTML="Draw, Computer also picked rock.";
@@ -60,12 +60,14 @@
     </script>
     <h1 id="title"><img src="images/favicon.png " height="64px" width="64px">Rock Paper Scissors</h1>
     <h2 id="game">Nothing happend yet!</h2><br>
-    <p id="score">Your Score : 0 | Computer Score : 0</p>
+    <hr>
+    <p id="score">Your Score : 0 // Computer Score : 0</p>
+    <hr>
     <div id="buttoncontainer">
         <button onclick="rockPaperScissors(1)"><img src="images/rock.png" height="128px" width="128px"><h1>Rock</h1></button>
         <button onclick="rockPaperScissors(2)"><img src="images/paper.png" height="128px" width="128px"><h1>Paper</h1></button>
         <button onclick="rockPaperScissors(3)"><img src="images/scissos.png" height="128px" width="128px"><h1>Scissors</h1></button>
     </div>
-    <footer>rock paper scissors v0.1 by <a href="https://github.com/mihirgala" title="Mihir's github">@mihirgala</a></footer>
+    <footer>rock paper scissors v0.2 by <a href="https://github.com/mihirgala" title="Mihir's github">@mihirgala</a></footer>
 </body>
 </html>
