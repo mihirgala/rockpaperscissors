@@ -1,31 +1,54 @@
+:root{
+    --primary-bg:#364f6b;
+    --primary-text:#ffffff;
+    --secondary-text:#00000;
+    --button-hover:rgb(126, 178, 226);
+}
+
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-    color: #ffffff;
-    background-color: #277FF2;
+    color:var(--primary-text);
+    background-color: var(--primary-bg);
+}
+#game,#title,#buttoncontainer,#scorecontainer{
+    display: flex;
+    justify-content: center;
 }
 button{
     background-color:transparent;
     margin-left: 10px;
     margin-top: 10px;
-    border-radius: 30px;
+    border:none;
+    border-radius: 20px;
+}
+button h1{
+    color:white;
+}
+.redbut:hover{
+    background-color: red;
 }
 button:hover{
-    background-color: white;
-    color:black;
+    background-color:var(--button-hover);
 }
-#score,#rounds{
+#buttoncontainer{
+    border: solid;
+}
+#score{
     font-weight: bold;
+    border:solid;
+    border-radius: 20px;
+    width:30%;
+    text-align: center;
 }
 #userScore,#compScore{
     color:#F26938;
 }
 
-#title,#game,#score,#buttoncontainer,#rounds{
+/* #title,#game,#score,#buttoncontainer{
     display:flex;
-    justify-content: center;
-}
+    justify-content: center; */
 footer{
     position: fixed;
     left: 0;

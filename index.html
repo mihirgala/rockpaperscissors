@@ -14,6 +14,7 @@
         var compScore=0;
         var userScore=0;
         var round=0;
+        var draws=0;
         <!--Rock = 1 Paper =2 Scissors =3-->
         function rockPaperScissors(userChoice){
             let compChoice = Math.floor((Math.random() * 3) + 1);
@@ -57,16 +58,17 @@
                 }
             }
             round++;
-            document.getElementById("score").innerText="Your Score : "+userScore+" // Computer Score : "+compScore+"";
-            document.getElementById("rounds").innerText="Round : "+round+"";
+            draws=round;
+            draws-=userScore+compScore;
+            document.getElementById("score").innerText="Your Score : "+userScore+" || Computer Score : "+compScore+"\nDraw(s) : "+draws+"\nRound : "+round+"";
             console.log(compChoice);
         }
         function reset(){
             round=0;
             userScore=0;
             compScore=0;
-            document.getElementById("score").innerText="Your Score : "+userScore+" // Computer Score : "+compScore+"";
-            document.getElementById("rounds").innerText="Round : "+round+"";
+            draws=0;
+            document.getElementById("score").innerText="Your Score : "+userScore+" || Computer Score : "+compScore+"\nDraw(s) : "+draws+"\nRound : "+round+"";
             document.getElementById("game").innerHTML="RESET!";
         }
     </script>
@@ -80,20 +82,19 @@
   gtag('config', 'G-7NVHME2F9X');
 </script>
 <body>
+    <div id="main">
     <h1 id="title"><img src="images/favicon.png " height="64px" width="64px">Rock Paper Scissors</h1>
     <h2 id="game">Nothing happend yet!</h2><br>
-    <hr>
-    <p id="score">Your Score : 0 // Computer Score : 0</p>
-    <p id="rounds">Round : 0</p>
-    <hr>
+    <div id="scorecontainer"><p id="score">Your Score : 0 || Computer Score : 0<br>Round : 0</p></div>
     <div id="buttoncontainer">
         <button onclick="rockPaperScissors(1)"><img src="images/rock.png" height="128px" width="128px"><h1>Rock</h1></button>
         <button onclick="rockPaperScissors(2)"><img src="images/paper.png" height="128px" width="128px"><h1>Paper</h1></button>
         <button onclick="rockPaperScissors(3)"><img src="images/scissos.png" height="128px" width="128px"><h1>Scissors</h1></button>
     </div>
     <div id="buttoncontainer">
-        <button type="reset" onclick="reset()"><h1>RESET</h1></button>
+        <button type="reset" onclick="reset()" class="redbut"><h1>RESET X</h1></button>
     </div>
-    <footer>rock paper scissors v0.3 by <a href="https://github.com/mihirgala" title="Mihir's github">@mihirgala</a></footer>
+    <footer>rock paper scissors v0.4 by <a href="https://github.com/mihirgala" title="Mihir's github">@mihirgala</a></footer>
+</div>
 </body>
 </html>
