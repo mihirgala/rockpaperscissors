@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+        var compScore=0;
+        var userScore=0;
+        <!--Rock = 1 Paper =2 Scissors =3-->
+        function rockPaperScissors(userChoice){
+            let compChoice = Math.floor((Math.random() * 3) + 1);
+            document.getElementById("score").innerText="Your Score : "+userScore+" Computer Score : "+compScore+"";
+            if(compChoice==1){
+                if(userChoice==1){
+                    document.getElementById("game").innerHTML="Draw, Computer also picked rock.";
+                }
+                else if(userChoice==2){
+                    document.getElementById("game").innerHTML="You Won, Computer picked rock!";
+                    userScore++;
+                }
+                else if(userChoice==3){
+                    document.getElementById("game").innerHTML="You lost, Computer picked rock :c";
+                    compScore++;
+                }
+            }
+            else if(compChoice==2){
+                if(userChoice==1){
+                    document.getElementById("game").innerHTML="You lost, Computer also picked paper :c";
+                    compScore++;
+                }
+                else if(userChoice==2){
+                    document.getElementById("game").innerHTML="Draw, Computer picked paper.";
+                }
+                else if(userChoice==3){
+                    document.getElementById("game").innerHTML="You Won, Computer picked rock paper!";
+                    userScore++;
+                }
+            }
+            else if(compChoice==3){
+                if(userChoice==1){
+                    document.getElementById("game").innerHTML="You won, Computer also picked scissors!";
+                    userScore++;
+                }
+                else if(userChoice==2){
+                    document.getElementById("game").innerHTML="You lost, Computer picked scissors :c";
+                    compScore++;
+                }
+                else if(userChoice==3){
+                    document.getElementById("game").innerHTML="Draw, Computer picked rock scissors.";
+                }
+            }
+            console.log(compChoice);
+        }
+    </script>
+    <h1 id="title"><img src="images/favicon.png " height="64px" width="64px">Rock Paper Scissors</h1>
+    <h2 id="game">Nothing happend yet!</h2><br>
+    <p id="score">Your Score : 0 | Computer Score : 0</p>
+    <div id="buttoncontainer">
+        <button onclick="rockPaperScissors(1)"><img src="images/rock.png" height="128px" width="128px"><h1>Rock</h1></button>
+        <button onclick="rockPaperScissors(2)"><img src="images/paper.png" height="128px" width="128px"><h1>Paper</h1></button>
+        <button onclick="rockPaperScissors(3)"><img src="images/scissos.png" height="128px" width="128px"><h1>Scissors</h1></button>
+    </div>
+    <footer>rock paper scissors v0.1 by <a href="https://github.com/mihirgala" title="Mihir's github">@mihirgala</a></footer>
+</body>
+</html>
