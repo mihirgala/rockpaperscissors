@@ -3,6 +3,7 @@
     --primary-text:#ffffff;
     --secondary-text:#00000;
     --button-hover:rgb(126, 178, 226);
+    --accentcolor:darkblue;
 }
 
 *{
@@ -11,13 +12,14 @@
 body{
     color:var(--primary-text);
     background-color: var(--primary-bg);
+    color: var(--primary-text);
 }
 #game,#title,#buttoncontainer,#scorecontainer{
     display: flex;
     justify-content: center;
 }
 button{
-    background-color:transparent;
+    background-color:var(--accentcolor);
     margin-left: 10px;
     margin-top: 10px;
     border:none;
@@ -32,9 +34,6 @@ button h1{
 button:hover{
     background-color:var(--button-hover);
 }
-#buttoncontainer{
-    border: solid;
-}
 #score{
     font-weight: bold;
     border:solid;
@@ -43,7 +42,7 @@ button:hover{
     text-align: center;
 }
 #userScore,#compScore{
-    color:#F26938;
+    color:var(--accentcolor);
 }
 
 /* #title,#game,#score,#buttoncontainer{
@@ -54,15 +53,18 @@ footer{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: white;
+    background-color:var(--accentcolor);
     color: black;
     text-align: right;
     border-radius: 5px;
 }
 footer a{
     text-decoration: none;
-    color:#277FF2;
+    color:var(--secondary-text);
 }
 footer a:hover{
     text-decoration: underline;
+}
+#version{
+    text-align: center;
 }
