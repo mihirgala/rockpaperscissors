@@ -14,6 +14,7 @@
     <script>
         var compScore=0;
         var userScore=0;
+        var round=0;
         <!--Rock = 1 Paper =2 Scissors =3-->
         function rockPaperScissors(userChoice){
             let compChoice = Math.floor((Math.random() * 3) + 1);
@@ -56,20 +57,34 @@
                     document.getElementById("game").innerHTML="Draw, Computer picked rock scissors.";
                 }
             }
+            round++;
             document.getElementById("score").innerText="Your Score : "+userScore+" // Computer Score : "+compScore+"";
+            document.getElementById("rounds").innerText="Round : "+round+"";
             console.log(compChoice);
+        }
+        function reset(){
+            round=0;
+            userScore=0;
+            compScore=0;
+            document.getElementById("score").innerText="Your Score : "+userScore+" // Computer Score : "+compScore+"";
+            document.getElementById("rounds").innerText="Round : "+round+"";
+            document.getElementById("game").innerHTML="RESET!";
         }
     </script>
     <h1 id="title"><img src="images/favicon.png " height="64px" width="64px">Rock Paper Scissors</h1>
     <h2 id="game">Nothing happend yet!</h2><br>
     <hr>
     <p id="score">Your Score : 0 // Computer Score : 0</p>
+    <p id="rounds">Round : 0</p>
     <hr>
     <div id="buttoncontainer">
         <button onclick="rockPaperScissors(1)"><img src="images/rock.png" height="128px" width="128px"><h1>Rock</h1></button>
         <button onclick="rockPaperScissors(2)"><img src="images/paper.png" height="128px" width="128px"><h1>Paper</h1></button>
         <button onclick="rockPaperScissors(3)"><img src="images/scissos.png" height="128px" width="128px"><h1>Scissors</h1></button>
     </div>
-    <footer>rock paper scissors v0.2 by <a href="https://github.com/mihirgala" title="Mihir's github">@mihirgala</a></footer>
+    <div id="buttoncontainer">
+        <button type="reset" onclick="reset()"><h1>RESET</h1></button>
+    </div>
+    <footer>rock paper scissors v0.3 by <a href="https://github.com/mihirgala" title="Mihir's github">@mihirgala</a></footer>
 </body>
 </html>

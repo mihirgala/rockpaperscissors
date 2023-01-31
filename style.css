@@ -4,23 +4,24 @@
 body{
     color: #ffffff;
     background-color: #277FF2;
-    padding: 0,30px,0,30px;
 }
 button{
     background-color:transparent;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 button:hover{
     background-color: white;
     color:black;
 }
-#score{
+#score,#rounds{
     font-weight: bold;
 }
 #userScore,#compScore{
     color:#F26938;
 }
 
-#title,#game,#score,#buttoncontainer{
+#title,#game,#score,#buttoncontainer,#rounds{
     display:flex;
     justify-content: center;
 }
