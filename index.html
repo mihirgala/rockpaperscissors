@@ -15,7 +15,6 @@
         <!--Rock = 1 Paper =2 Scissors =3-->
         function rockPaperScissors(userChoice){
             let compChoice = Math.floor((Math.random() * 3) + 1);
-            document.getElementById("score").innerText="Your Score : "+userScore+" // Computer Score : "+compScore+"";
             if(compChoice==1){
                 if(userChoice==1){
                     document.getElementById("game").innerHTML="Draw, Computer also picked rock.";
@@ -55,6 +54,7 @@
                     document.getElementById("game").innerHTML="Draw, Computer picked rock scissors.";
                 }
             }
+            document.getElementById("score").innerText="Your Score : "+userScore+" // Computer Score : "+compScore+"";
             console.log(compChoice);
         }
     </script>
