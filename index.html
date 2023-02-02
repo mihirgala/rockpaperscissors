@@ -10,68 +10,6 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <title>Rock Paper Scissors</title>
 </head>
-    <script>
-        var compScore=0;
-        var userScore=0;
-        var round=0;
-        var draws=0;
-        <!--Rock = 1 Paper =2 Scissors =3-->
-        function rockPaperScissors(userChoice){
-            let compChoice = Math.floor((Math.random() * 3) + 1);
-            if(compChoice==1){
-                if(userChoice==1){
-                    document.getElementById("game").innerHTML="Draw, Computer also picked rock.";
-                }
-                else if(userChoice==2){
-                    document.getElementById("game").innerHTML="You Won, Computer picked rock!";
-                    userScore++;
-                }
-                else if(userChoice==3){
-                    document.getElementById("game").innerHTML="You lost, Computer picked rock :c";
-                    compScore++;
-                }
-            }
-            else if(compChoice==2){
-                if(userChoice==1){
-                    document.getElementById("game").innerHTML="You lost, Computer picked paper :c";
-                    compScore++;
-                }
-                else if(userChoice==2){
-                    document.getElementById("game").innerHTML="Draw, Computer also picked paper.";
-                }
-                else if(userChoice==3){
-                    document.getElementById("game").innerHTML="You Won, Computer picked rock paper!";
-                    userScore++;
-                }
-            }
-            else if(compChoice==3){
-                if(userChoice==1){
-                    document.getElementById("game").innerHTML="You won, Computer picked scissors!";
-                    userScore++;
-                }
-                else if(userChoice==2){
-                    document.getElementById("game").innerHTML="You lost, Computer picked scissors :c";
-                    compScore++;
-                }
-                else if(userChoice==3){
-                    document.getElementById("game").innerHTML="Draw, Computer picked also rock scissors.";
-                }
-            }
-            round++;
-            draws=round;
-            draws-=userScore+compScore;
-            document.getElementById("score").innerText="Your Score : "+userScore+" || Computer Score : "+compScore+"\nDraw(s) : "+draws+"\nRound : "+round+"";
-            console.log(compChoice);
-        }
-        function reset(){
-            round=0;
-            userScore=0;
-            compScore=0;
-            draws=0;
-            document.getElementById("score").innerText="Your Score : "+userScore+" || Computer Score : "+compScore+"\nDraw(s) : "+draws+"\nRound : "+round+"";
-            document.getElementById("game").innerHTML="RESET!";
-        }
-    </script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NVHME2F9X"></script>
 <script>
@@ -80,20 +18,26 @@
   gtag('js', new Date());
 
   gtag('config', 'G-7NVHME2F9X');
-</script>
+</script> <!--Google Analytics-->
 <body>
-    <div id="main">
-    <h1 id="title"><img src="images/favicon.png " height="64px" width="64px">Rock Paper Scissors</h1>
-    <h2 id="game">Nothing happend yet!</h2><br>
-    <div id="scorecontainer"><p id="score">Your Score : 0 || Computer Score : 0<br>Round : 0</p></div>
-    <div id="buttoncontainer">
+    <div id="container">
+    <div id="gamecontainer">
+        <h1 id="title">ROCK PAPER SCISSORS</h1>
+    <h1 id="playerchoice">PLAYER : ()</h1>
+    <h1 id="compchoice">COMPUTER : ()</h1>
+    <h1 id="outcome">NOTHING</h1>
+    <h2 id="scoreboard">You : 0 Computer : 0 Draws : 0</h2>
+        <div class="gamebuttons">
         <button onclick="rockPaperScissors(1)"><img src="images/rock.png" height="128px" width="128px"><h1>Rock</h1></button>
         <button onclick="rockPaperScissors(2)"><img src="images/paper.png" height="128px" width="128px"><h1>Paper</h1></button>
         <button onclick="rockPaperScissors(3)"><img src="images/scissos.png" height="128px" width="128px"><h1>Scissors</h1></button>
     </div>
-    <div id="buttoncontainer">
+        <div class="gamebuttons">
         <button type="reset" onclick="reset()" class="redbut"><h1>RESET X</h1></button>
     </div>
-    <footer>rock paper scissors v0.4 by <a href="https://github.com/mihirgala" title="Mihir's github">@mihirgala</a></footer>
+    </div>
+    <p id="footer">version 0.5 by <a href="https://github.com/mihirgala">@mihirgala</a></p>
+</div>
 </body>
+<script src="index.js"></script>
 </html>

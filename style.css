@@ -1,9 +1,9 @@
 :root{
-    --primary-bg:#364f6b;
+    --primary-bg:#4700cc;
     --primary-text:#ffffff;
     --secondary-text:#00000;
     --button-hover:rgb(126, 178, 226);
-    --accentcolor:darkblue;
+    --accentcolor:rgba(161, 141, 253, 0.637);
 }
 
 *{
@@ -14,7 +14,7 @@ body{
     background-color: var(--primary-bg);
     color: var(--primary-text);
 }
-#game,#title,#buttoncontainer,#scorecontainer{
+#container,.gamebuttons{
     display: flex;
     justify-content: center;
 }
@@ -48,7 +48,7 @@ button:hover{
 /* #title,#game,#score,#buttoncontainer{
     display:flex;
     justify-content: center; */
-footer{
+#footer{
     position: fixed;
     left: 0;
     bottom: 0;
@@ -57,14 +57,12 @@ footer{
     color: black;
     text-align: right;
     border-radius: 5px;
+    margin: 0;
 }
-footer a{
+#footer a{
     text-decoration: none;
     color:var(--secondary-text);
 }
-footer a:hover{
+#footer a:hover{
     text-decoration: underline;
-}
-#version{
-    text-align: center;
 }
