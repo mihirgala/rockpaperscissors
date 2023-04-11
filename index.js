@@ -14,7 +14,7 @@ var compScore=0;
                 if(userChoice==1){
                     playerchoice.textContent=`PLAYER : ROCK`;
                     compchoice.textContent=`COMPUTER : ROCK`;
-                    outcome.style.color="black";
+                    outcome.style.color="white";
                     outcome.textContent=`DRAW!`;
                 }
                 else if(userChoice==2){
