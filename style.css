@@ -1,9 +1,9 @@
 :root{
-    --primary-bg:#4700cc;
-    --primary-text:#ffffff;
-    --secondary-text:#00000;
-    --button-hover:rgb(126, 178, 226);
-    --accentcolor:rgba(161, 141, 253, 0.637);
+    --primary-bg:#000000;
+    --primary-text:#00e200;
+    --secondary-text:#008f00;
+    --button-hover:#00e200;
+    --accentcolor:rgba(69, 240, 77, 0.637);
 }
 
 *{
